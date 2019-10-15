@@ -1,0 +1,43 @@
+//5.3 lab modul tutorial (Reca Seng Binti Mohd Fadzil Seng, B031910187) 
+// Write a program that reads a given set of integers and then prints the number of odd and even integers. 
+// It also output the number zeros.
+
+#include <iostream>
+#include <conio.h>
+using namespace std;
+
+int main()
+{
+	int no[20], i, a = 0, b = 0, c = 0;
+	cout << "Please enter 20 integers, positive, negative or zeros" << endl;
+	for (i = 0; i < 20; i++)
+	{
+		cin >> no[i];
+
+		if (no[i] % 2 != 0)
+		{
+			a++;
+		}
+		else if (no[i] % 2 == 0)
+		{
+			b++;
+		}
+		else
+		{
+			cout << "Enter a valid integer\n";
+		}
+
+		if (no[i] == 0)
+		{
+			c++;
+		}
+	}
+	cout << "The numbers you entered are: \n";
+	cout << no[0] << " " << no[1] << " " << no[2] << " " << no[3] << " " << no[4] << " " << no[5] << " ";
+	cout << no[6] << " " << no[7] << " " << no[8] << " " << no[9] << " " << no[10] << " " << no[11] << " ";
+	cout << no[12] << " " << no[13] << " " << no[14] << " " << no[15] << " " << no[16] << " " << no[17] << " ";
+	cout << no[18] << " " << no[19] << "   \n\n";
+	cout << "There are " << b << " evens, which includes " << c << " zeros.\n";
+	cout << "The number of odd numbers is " << a << "."<<endl;
+	return 0;
+}
